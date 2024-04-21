@@ -4,7 +4,7 @@ from website.models import MCQ_Gen,QuizHeading
 # Create your views here.
 def home(request):
     context={
-        "data":QuizHeading.objects.all().values()
+        "data":QuizHeading.objects.order_by('-id')
     }
 
     if request.method=="POST":

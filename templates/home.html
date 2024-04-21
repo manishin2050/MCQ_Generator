@@ -21,6 +21,14 @@
   <body>
 {% include "nav.html" %}
 <div class="row row-cols-1 row-cols-md-4 p-5 pt-0 g-1 ">
+  <div id="AddMore" title="Create New Question Paper" class="col" style="cursor: pointer; margin-top: -0px;">
+    <div class="card mt-5">
+      <img class="text-center container"  style="height: 100px;width: 120px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxiWZy9SKfQjJQGzfTbbb39Y62rklEpWRlLg&s" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center">Add More..</h5>
+      </div>
+    </div>
+  </div>
   {% for i in data %}
   <div>
 
@@ -38,14 +46,6 @@
   </div>
   {% endfor %}
 
-  <div id="AddMore" title="Create New Question Paper" class="col" style="cursor: pointer; margin-top: -0px;">
-    <div class="card mt-5">
-      <img class="text-center container"  style="height: 100px;width: 120px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxiWZy9SKfQjJQGzfTbbb39Y62rklEpWRlLg&s" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-center">Add More..</h5>
-      </div>
-    </div>
-  </div>
 </div>
 <form hidden action="/" method="post" >
   {% csrf_token %}
